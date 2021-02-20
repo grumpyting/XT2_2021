@@ -13,8 +13,10 @@
 			<div id="bar">
 				<canvas id="barChart" width="400" height="400"></canvas>
 			</div>
-
-			<canvas id="doughnut-chart" width="30%" height="30%"></canvas>
+			<div class="pie">
+				<canvas id="oxyChart" width="30%" height="30%"></canvas>
+				<canvas id="abcChart" width="30%" height="30%"></canvas>
+			</div>
 		</main>
 		
 	</body>
@@ -55,7 +57,27 @@ var barChart = new Chart(ctx, {
     }
 });
 
-new Chart(document.getElementById("doughnut-chart"), {
+new Chart(document.getElementById("oxyChart"), {
+    type: 'doughnut',
+    data: {
+      labels: ["Oxygen","Co2"],
+      datasets: [
+        {
+          label: "oxygen",
+          backgroundColor: ["#3e95cd", "#bababa1C"],
+          data: [90,10]
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'voer'
+      }
+    }
+});
+
+new Chart(document.getElementById("abcChart"), {
     type: 'doughnut',
     data: {
       labels: ["Oxygen","Co2"],
