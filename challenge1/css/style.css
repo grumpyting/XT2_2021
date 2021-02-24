@@ -35,16 +35,18 @@ main > aside {
   padding: 0;
 }
 
-header, footer {
-  height: 5vh;
-  margin:0;
-}
 header, footer, article, nav, aside {
-  padding: 1em;
+  	padding: 1em;
 }
 
 header{
-	padding-top: 0;
+	background-color: grey;
+	height: 5em;	
+}
+
+#line-chart{
+	width:600px;
+	height:600px;
 }
 
 /*#bar{

@@ -7,6 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/Chart.css">
 		<script type="text/javascript" src="js/Chart.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 	</head>
 	<body>
 		<header>
@@ -14,21 +15,23 @@
 		</header>
 		<main>
 			<div id="flexContainer">
-				<article id="bar">
+<!-- 				<article id="bar">
 					<canvas id="barChart" width="400" height="400"></canvas>
+				</article> -->
+				<article id="line">
+					<canvas id="line-chart" ></canvas>
 				</article>
-				<article class="pie">
+<!-- 				<article class="pie">
 					<canvas id="oxyChart" width="30%" height="30%"></canvas>
 					<canvas id="abcChart" width="30%" height="30%"></canvas>
-				</article>
+				</article> -->
 			</div>
 		</main>
-		
 	</body>
 </html>
 
 <script>
-var ctx = document.getElementById('barChart');
+/*ar ctx = document.getElementById('barChart');
 var barChart = new Chart(ctx, {
     type: 'bar',
     data: {
@@ -62,6 +65,35 @@ var barChart = new Chart(ctx, {
     }
 });
 
+
+*/
+
+new Chart(document.getElementById("line-chart"), {
+  type: 'line',
+  data: {
+    labels: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    datasets: [{ 
+        data: [400,500,500,600,700,800,900],
+        label: "This week",
+        borderColor: "#3e95cd",
+        fill: false
+      }, { 
+        data: [300,350,500,600,500,700,800],
+        label: "Last week",
+        borderColor: "#8e5ea2",
+        fill: false
+      }
+    ]
+  },
+  options: {
+    title: {
+      display: true,
+      text: 'Amount of distance'
+    }
+  }
+});
+
+    /*
 new Chart(document.getElementById("oxyChart"), {
     type: 'doughnut',
     data: {
@@ -100,5 +132,5 @@ new Chart(document.getElementById("abcChart"), {
         text: 'voer'
       }
     }
-});
+});*/
 </script>
