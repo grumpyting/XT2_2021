@@ -41,7 +41,8 @@ header, footer, article, nav, aside {
 
 header{
 	background-color: grey;
-	height: 5em;	
+	height: 5em;
+	width: 100%;
 }
 
 #line-chart{
@@ -49,13 +50,35 @@ header{
 	height:600px;
 }
 
-/*#bar{
-	width: 45%;
-	height: 50%;
+.charts{
+	margin-top: 1em;
 }
 
-.pie{
-	width: 30%;
-	height: 30%;
+#pie{
+	height: 350px;
+	width: 350px;
 }
-*/
+
+#bar{
+	height: 350px;
+}
+
+
+
+@media only screen and (min-width: 568px) {
+
+}
+
+@media only screen and (min-width: 1024px) {
+	#pie{
+		height: 350px;
+		width: 350px;
+		display: flex;
+		flex-direction: row;
+	}	
+
+}
+	
+@media only screen and (min-width: 1200px) {
+	    
+}

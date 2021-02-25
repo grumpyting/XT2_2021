@@ -14,62 +14,20 @@
 			<h1>SpacEx</h1>
 		</header>
 		<main>
-			<div id="flexContainer">
-<!-- 				<article id="bar">
-					<canvas id="barChart" width="400" height="400"></canvas>
-				</article> -->
-				<article id="line">
+			<div id="flexContainer"> 
+				<article class="charts" id="line">
 					<canvas id="line-chart" ></canvas>
 				</article>
-<!-- 				<article class="pie">
-					<canvas id="oxyChart" width="30%" height="30%"></canvas>
-					<canvas id="abcChart" width="30%" height="30%"></canvas>
-				</article> -->
 			</div>
 		</main>
 	</body>
 </html>
 
 <script>
-/*ar ctx = document.getElementById('barChart');
-var barChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Water', 'Food', 'Electricity','Fuel'],
-        datasets: [{
-            label: 'Amount',
-            data: [95, 87, 82, 85],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-});
-
-
-*/
 
 new Chart(document.getElementById("line-chart"), {
   type: 'line',
+  responsive: 'true',
   data: {
     labels: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
     datasets: [{ 
@@ -93,44 +51,4 @@ new Chart(document.getElementById("line-chart"), {
   }
 });
 
-    /*
-new Chart(document.getElementById("oxyChart"), {
-    type: 'doughnut',
-    data: {
-      labels: ["Oxygen","Co2"],
-      datasets: [
-        {
-          label: "oxygen",
-          backgroundColor: ["#3e95cd", "#bababa1C"],
-          data: [90,10]
-        }
-      ]
-    },
-    options: {
-      title: {
-        display: true,
-        text: 'voer'
-      }
-    }
-});
-
-new Chart(document.getElementById("abcChart"), {
-    type: 'doughnut',
-    data: {
-      labels: ["Oxygen","Co2"],
-      datasets: [
-        {
-          label: "Population (millions)",
-          backgroundColor: ["#3e95cd", "#bababa1C"],
-          data: [90,10]
-        }
-      ]
-    },
-    options: {
-      title: {
-        display: true,
-        text: 'voer'
-      }
-    }
-});*/
 </script>
