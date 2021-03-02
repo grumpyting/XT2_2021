@@ -11,7 +11,7 @@
 	</head>
 	<body>
 		<header>
-			<h1>SpacEx</h1>
+			<h1>SpaceX</h1>
 		</header>
 		<main>
 			<div id="flexContainer"> 
@@ -27,6 +27,7 @@
 
 new Chart(document.getElementById("line-chart"), {
   type: 'line',
+  maintainAspectRatio: false,
   responsive: 'true',
   data: {
     labels: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
@@ -44,6 +45,8 @@ new Chart(document.getElementById("line-chart"), {
     ]
   },
   options: {
+  	responsive:false,
+  	maintainAspectRatio: false,
     title: {
       display: true,
       text: 'Amount of distance'

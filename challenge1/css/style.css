@@ -45,9 +45,10 @@ header{
 	width: 100%;
 }
 
-#line-chart{
-	width:600px;
-	height:600px;
+#line {
+	height: 500px;
+	width: auto;
+	position: relative;
 }
 
 .charts{
@@ -55,17 +56,32 @@ header{
 }
 
 #pie{
-	height: 350px;
-	width: 350px;
+	height: 300px;
+	width: 300px;
 }
 
 #bar{
-	height: 350px;
+	height: 400px;
+	width: 350px
 }
 
-
+article#line.charts {
+	width: 700px;
+}
 
 @media only screen and (min-width: 568px) {
+	main{
+		background-color: red;	
+		justify-content: center;
+
+	}
+
+	#barChart{
+		background-color: blue;
+		width: 1000px;
+	}
+
+
 
 }
 
