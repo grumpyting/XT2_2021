@@ -15,11 +15,13 @@
 		</header>
 		<main>
 			<div id="flexContainer">
+        <div class="pieWrapper">
 		    <article class="charts" id="pie">
 					<canvas id="oxyChart" ></canvas>
 				</article>
         <article class="charts" id="pie">
           <canvas id="food"></canvas>
+        </div>
         </article>
         <article class="charts" id="bar">
           <canvas id="barChart"></canvas>
@@ -79,7 +81,7 @@ var barChart = new Chart(ctx, {
         labels: ['Carbs', 'Protein', 'Vegetables','Water','Other'],
         datasets: [{
             label: 'Amount',
-            barPercentage: 0.1,
+            barPercentage: 0.7,
             data: [50, 57, 12, 85, 88],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -98,8 +100,7 @@ var barChart = new Chart(ctx, {
             borderWidth: 1
         }]
     },
-     responsive: true,
-    maintainAspectRatio: true,
+     
     options: {
         scales:
         {

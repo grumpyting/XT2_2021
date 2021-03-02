@@ -29,7 +29,7 @@ main > aside {
   order: 2;
 }
 
-#flex-container{
+#flexContainer{
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -71,14 +71,16 @@ article#line.charts {
 
 @media only screen and (min-width: 568px) {
 	main{
-		background-color: red;	
 		justify-content: center;
-
 	}
 
-	#barChart{
-		background-color: blue;
-		width: 1000px;
+	#flexContainer{
+		justify-content: center;
+		align-items: center;
+	}
+
+	#bar{
+		width: 600px;
 	}
 
 
@@ -86,12 +88,31 @@ article#line.charts {
 }
 
 @media only screen and (min-width: 1024px) {
+	main{
+		justify-content: center;
+	}
+
 	#pie{
-		height: 350px;
-		width: 350px;
+		width: 400px;
+		margin-bottom: 150px;
+	}
+
+	.pieWrapper{
 		display: flex;
 		flex-direction: row;
-	}	
+		margin-bottom: 20px;
+	}
+
+
+	#flexContainer{
+		justify-content: center;
+		align-items: center;
+
+	}
+
+	#bar{
+		width: 760px;
+	}
 
 }
 	
