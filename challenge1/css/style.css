@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
   box-sizing: border-box; 
+  font-family: Roboto;
 }
 body {
   display: flex;
@@ -7,6 +10,7 @@ body {
   margin: 0;
   display: flex;
   min-height: 100vh; /*grootte ter waarde van 1% van de viewport. hier dus 100%*/
+  background-color: grey;
 }
 main {
   display: flex;
@@ -16,17 +20,10 @@ main > article {
   flex: 1;
   order: 1;/*volgorde van de items*/
 }
-main > nav, 
-main > aside {
-  flex: 0 0 20vw;
-}
-main > nav {
-  background: #D7E8D4;
-  order: 3;
-}
-main > aside {
-  background: beige;
-  order: 2;
+
+nav>a{
+	font-size:14pt; 
+	color:white;
 }
 
 #flexContainer{
@@ -40,13 +37,15 @@ header, footer, article, nav, aside {
 }
 
 header{
-	background-color: grey;
+	background-color: black;
 	height: 5em;
 	width: 100%;
+	display: flex;
+	flex-direction: row;
 }
 
-#line {
-	height: 500px;
+#lineChart {
+	height: 200px;
 	width: auto;
 	position: relative;
 }
@@ -65,9 +64,6 @@ header{
 	width: 350px
 }
 
-article#line.charts {
-	width: 700px;
-}
 
 @media only screen and (min-width: 568px) {
 	main{
@@ -80,10 +76,14 @@ article#line.charts {
 	}
 
 	#bar{
-		width: 600px;
+		width: 500px;
 	}
 
-
+	#lineChart {
+		height: 550px;
+		width: 550px;
+		/*werkt alleen bij een refresh*/
+	}
 
 }
 
@@ -102,8 +102,6 @@ article#line.charts {
 		flex-direction: row;
 		margin-bottom: 20px;
 	}
-
-
 	#flexContainer{
 		justify-content: center;
 		align-items: center;
@@ -111,11 +109,23 @@ article#line.charts {
 	}
 
 	#bar{
-		width: 760px;
+		width: 750px;
 	}
-
+	#lineChart {
+		height: 800px;
+		width: 800px;	
+		/*werkt alleen bij een refresh*/
+	}
 }
 	
 @media only screen and (min-width: 1200px) {
-	    
+	
+	#bar{
+		width: 900px;
+	}
+	#lineChart {
+		height: 900px;
+		width: 1000px;	
+		/*werkt alleen bij een refresh*/
+	}    
 }
