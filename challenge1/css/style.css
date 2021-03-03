@@ -44,6 +44,10 @@ header{
 	flex-direction: row;
 }
 
+#logo{
+	width: 100px;
+}
+
 #lineChart {
 	height: 200px;
 	width: auto;
@@ -107,7 +111,9 @@ header{
 		align-items: center;
 
 	}
-
+	#logo{
+		width: 150px;
+	}
 	#bar{
 		width: 750px;
 	}
