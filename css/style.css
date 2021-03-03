@@ -10,8 +10,8 @@ body {
   margin: 0;
   display: flex;
   min-height: 100vh; /*grootte ter waarde van 1% van de viewport. hier dus 100%*/
-  background: rgb(11,44,56);
-  background: radial-gradient(circle, rgba(11,44,56,1) 0%, rgba(19,21,25,1) 100%);
+background: rgb(14,51,65);
+background: radial-gradient(circle, rgba(14,51,65,1) 0%, rgba(12,19,23,1) 100%);
 }
 
 main {
