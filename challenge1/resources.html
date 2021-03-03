@@ -81,24 +81,24 @@ var ctx = document.getElementById('barChart');
 var barChart = new Chart(ctx, {
     type: 'horizontalBar',
     data: {
-        labels: ['Carbs', 'Protein', 'Vegetables','Water','Other'],
+        labels: ['Carbs','Protein', 'Vegetables','Water','Other'],
         datasets: [{
             label: 'Amount',
             barPercentage: 0.7,
-            data: [50, 57, 12, 85, 88],
+            data: [55, 57, 22, 85, 88],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(220, 150, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)'
+                '#fac104',
+                '#b42423',
+                '#197419',
+                '#5090ac',
+                '#8930ce'
             ],
             borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(220, 150, 86, 1)',
-                'rgba(75, 192, 192, 1)'
+                '#fac104',
+                '#b42423',
+                '#197419',
+                '#5090ac',
+                '#8930ce'
             ],
             borderWidth: 1
         }]
